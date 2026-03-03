@@ -1,3 +1,51 @@
+# MIDI DJ Controller z kontrolą gestami
+
+Projekt przedstawia autorski kontroler MIDI DJ wzbogacony o eksperymentalny system sterowania gestami. Urządzenie zostało opracowane w ramach pracy inżynierskiej na kierunku **Automatyka i Robotyka**.
+
+## Opis projektu
+
+Urządzenie łączy tradycyjne elementy kontrolera DJ (fadery, pokrętła, koła jog, przyciski) z warstwą bezdotykowego sterowania gestami opartą na ultradźwiękowych czujnikach odległości.
+
+Kontroler komunikuje się z komputerem poprzez interfejs **USB-MIDI** i jest w pełni kompatybilny z oprogramowaniem DJ-skim, takim jak **Mixxx**.
+
+## Sprzęt (Hardware)
+
+Główne komponenty systemu:
+
+* **Mikrokontroler:** Raspberry Pi Pico (RP2040)
+* **Wejścia analogowe:** Multiplekser ADC (rozszerzenie liczby kanałów analogowych)
+* **Wejścia cyfrowe:** Ekspander GPIO (dodatkowe wejścia dla przycisków)
+* **Detekcja gestów:** Ultradźwiękowe czujniki odległości
+* **Interfejs dotykowy:** Pojemnościowe czujniki dotyku
+* **Konstrukcja:** Dedykowana płytka PCB oraz obudowa wykonana w technologii druku 3D
+
+Pełna dokumentacja sprzętowa, schematy oraz projekty PCB znajdują się w katalogu `/hardware`.
+
+## Oprogramowanie układowe (Firmware)
+
+Firmware odpowiada za:
+
+* Odczyt i filtrowanie sygnałów z wejść analogowych i cyfrowych.
+* Skalowanie sygnałów i eliminację szumów.
+* Interpretację danych z czujników na konkretne gesty.
+* Generowanie komunikatów MIDI (**Note On/Off, Control Change, Pitch Bend**).
+* Komunikację USB-MIDI o niskim opóźnieniu.
+
+Kod źródłowy dostępny jest w katalogu `/firmware`.
+
+## Integracja z oprogramowaniem
+
+Kontroler został przetestowany z oprogramowaniem **Mixxx**. W repozytorium znajdują się niezbędne pliki mapowania MIDI (formaty `.xml` oraz `.js`).
+
+## Zawartość repozytorium
+
+* **Hardware:** Schematy ideowe i projekty płytek drukowanych.
+* **Firmware:** Kod źródłowy mikrokontrolera.
+* **Mapping:** Pliki konfiguracyjne MIDI dla oprogramowania DJ.
+* **Dokumentacja:** Wyniki testów i specyfikacja techniczna.
+
+---
+
 # MIDI DJ Controller with Gesture Control
 
 This project presents a custom-built MIDI DJ controller enhanced with an experimental gesture control system.  
@@ -48,7 +96,14 @@ The repository includes MIDI mapping files (XML and JS).
 - MIDI mapping configuration
 - Documentation and test results
 
+## Licencja
+
+Ten projekt jest udostępniony na licencji **Creative Commons Zero**. 
+Więcej informacji w pliku [LICENSE](LICENSE).
+
+---
+
 ## Author
 
-Wiktor Pożarzycki  
+Wiktor Pozarzycki  
 Engineering Thesis Project – 2026
