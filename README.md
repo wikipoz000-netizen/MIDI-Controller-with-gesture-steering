@@ -104,7 +104,7 @@ Ten projekt jest udostępniony na licencji **Creative Commons Zero**.
 Więcej informacji w pliku [LICENSE](LICENSE).
 
 
-## Author
+## Autor
 
 Wiktor Pozarzycki  
-Engineering Thesis Project – 2026
+Praca inżynierska – 2026
