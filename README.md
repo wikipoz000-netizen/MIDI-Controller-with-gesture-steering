@@ -1,3 +1,4 @@
+English below
 # MIDI DJ Controller z kontrolą gestami
 
 Projekt przedstawia autorski kontroler MIDI DJ wzbogacony o eksperymentalny system sterowania gestami. Urządzenie zostało opracowane w ramach pracy inżynierskiej na kierunku **Automatyka i Robotyka**.
