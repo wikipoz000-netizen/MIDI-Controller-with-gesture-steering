@@ -96,12 +96,13 @@ The repository includes MIDI mapping files (XML and JS).
 - MIDI mapping configuration
 - Documentation and test results
 
+
+---
 ## Licencja
 
 Ten projekt jest udostępniony na licencji **Creative Commons Zero**. 
 Więcej informacji w pliku [LICENSE](LICENSE).
 
----
 
 ## Author
 
